@@ -1,0 +1,52 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.weekthree;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Texon, Broderick Jr. M.
+ */
+public class WeekThree {
+
+    public static void main(String[] args) {
+        
+       Scanner input = new Scanner(System.in);
+
+        String correctUsername = "broderick";
+        String correctPassword = "1267";
+        boolean accountLocked = false;
+
+        System.out.println("========== LOGIN VALIDATOR ==========");
+
+        System.out.print("Enter username: ");
+        String username = input.nextLine();
+
+        if (username.equals(correctUsername)) {
+
+            System.out.print("Enter password: ");
+            String password = input.nextLine();
+
+            if (password.equals(correctPassword)) {
+
+                if (!accountLocked) {
+                    System.out.println("Login successful! Welcome.");
+                } else {
+                    System.out.println("Login failed: Account is locked.");
+                }
+
+            } else {
+                System.out.println("Login failed: Incorrect password.");
+            }
+
+        } else {
+            System.out.println("Login failed: Incorrect username.");
+        }
+
+        System.out.println("=====================================");
+        
+    }
+}
