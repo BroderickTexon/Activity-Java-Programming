@@ -1,0 +1,43 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.weekthree;
+
+/**
+ *
+ * @author Texon, Broderick Jr. M.
+ */
+public class WeekThree {
+
+    public static void main(String[] args) {
+        
+        System.out.println("===========GRADE CLASSIFIER===========");
+
+        int score = 87;
+
+        if (score >= 60) {
+            System.out.println("Score: " + score);
+            System.out.println("PASSED");
+        } else {
+            System.out.println("Score: " + score);
+            System.out.println("FAILED");
+        }
+
+        System.out.println("======================================");
+
+        // Test another score by changing the value.
+        score = 21;
+
+        if (score >= 60) {
+            System.out.println("Score: " + score);
+            System.out.println("PASSED");
+        } else {
+            System.out.println("Score: " + score);
+            System.out.println("FAILED");
+        }
+        
+        System.out.println("======================================");
+        
+    }
+}
