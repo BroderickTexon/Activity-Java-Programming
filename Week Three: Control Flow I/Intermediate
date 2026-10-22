@@ -1,0 +1,41 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.weekthree;
+
+/**
+ *
+ * @author Texon, Broderick Jr. M.
+ */
+public class WeekThree {
+
+    public static void main(String[] args) {
+        
+        System.out.println("===========DISCOUNT SYSTEM===========");
+
+        double purchaseAmount = 5500.00;
+        double discount;
+        double discountedPrice;
+
+        if (purchaseAmount >= 5000) {
+            discount = 0.15;
+        } else if (purchaseAmount >= 3000) {
+            discount = 0.10;
+        } else if (purchaseAmount >= 1000) {
+            discount = 0.05;
+        } else {
+            discount = 0.00;
+        }
+
+        discountedPrice = purchaseAmount - (purchaseAmount * discount);
+
+        System.out.println("Purchase Amount: " + purchaseAmount);
+        System.out.println("Discount Rate: " + (discount * 100) + "%");
+        System.out.println("Discount Amount: " + (purchaseAmount * discount));
+        System.out.println("Final Price: " + discountedPrice);
+
+        System.out.println("=====================================");
+        
+    }
+}
