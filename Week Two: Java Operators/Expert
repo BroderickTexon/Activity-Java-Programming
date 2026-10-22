@@ -1,0 +1,51 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.weektwo;
+/**
+ *
+ * @author Texon, Broderick Jr. M.
+ */
+public class WeekTwo {
+
+    public static void main(String[] args) {
+        
+      int a = 14, b = 4, c = 3;
+
+        // Prediction: 26
+        int result1 = a + b * c;
+        System.out.println("Result 1: " + result1);
+        // Multiplication happens before addition.
+
+        // Prediction: true
+        boolean result2 = a > b && b > c;
+        System.out.println("Result 2: " + result2);
+        // Relational comparisons happen before logical AND.
+
+        int x = 7;
+
+        // Prediction: 16
+        int result3 = x++ + ++x;
+        System.out.println("Result 3: " + result3);
+        // x++ uses 7, then x becomes 8.
+        // ++x increases x to 9 before using it.
+        // Therefore, 7 + 9 = 16, not 8.
+
+        // Correction: The actual prediction for Result 3 is 16.
+        // Postfix uses the old value; prefix uses the new value.
+
+        int number = 12;
+
+        // Prediction: true
+        boolean result4 = number > 6 || number++ < 6;
+        System.out.println("Result 4: " + result4);
+        System.out.println("Number: " + number);
+
+        // Logical OR (||) stops evaluating when its left side
+        // is true, so number++ is not executed.
+      
+      
+        
+    }
+}
