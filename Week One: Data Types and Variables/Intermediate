@@ -1,0 +1,31 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.weekone;
+
+/**
+ *
+ * @author Texon, Broderick Jr. M.
+ */
+public class WeekOne {
+
+    public static void main(String[] args) {
+        
+        int quantity = 67;
+        double unitPrice = 167.75;
+        String storeName = "Ballerina Capuciina Store";
+
+        double totalCost = quantity * unitPrice;
+
+        System.out.println("===== SHOPPING SUMMARY =====");
+        System.out.println("Store Name: " + storeName);
+        System.out.println("Quantity: " + quantity);
+        System.out.println("Unit Price: " + unitPrice);
+        System.out.println("Total Cost: " + totalCost);
+
+        // totalCost should not be an int because
+        // the unit price and total may contain decimals.
+        
+    }
+}
