@@ -1,0 +1,63 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.weekone;
+
+/**
+ *
+ * @author Texon, Broderick Jr. M.
+ */
+public class WeekOne {
+
+    public static void main(String[] args) {
+        
+       System.out.println("===== OVERFLOW TEST =====");
+
+        byte number = 127;
+        number++;
+
+        System.out.println("Byte after increment: " + number);
+
+        System.out.println("\n===== STRING COMPARISON =====");
+
+        String first = new String("Java");
+        String second = new String("Java");
+        String third = "Java";
+
+        System.out.println("first == second: " + (first == second));
+        System.out.println("first == third: " + (first == third));
+        System.out.println("second == third: " + (second == third));
+
+        System.out.println("first equals second: " + first.equals(second));
+        System.out.println("first equals third: " + first.equals(third));
+        System.out.println("second equals third: " + second.equals(third));
+
+        /* first == second is false because they reference
+           different String objects created using new.
+           first == third and second == third are false because
+           the references point to different objects.
+           equals() compares the text, so all equals() results
+           are true because all three contain "Java". */
+
+        System.out.println("\n===== ARRAY REFERENCE SHARING =====");
+
+        int[] numbers1 = {1, 2, 3};
+        int[] numbers2 = numbers1;
+
+        System.out.println("Before modification:");
+        System.out.println("numbers1[0]: " + numbers1[0]);
+        System.out.println("numbers2[0]: " + numbers2[0]);
+
+        numbers2[0] = 67;
+
+        System.out.println("After modification:");
+        System.out.println("numbers1[0]: " + numbers1[0]);
+        System.out.println("numbers2[0]: " + numbers2[0]);
+
+        /* Both variables reference the same array.
+           Changing the array through numbers2 also affects
+           the value seen through numbers1. */
+        
+    }
+}
