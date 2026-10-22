@@ -1,0 +1,40 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.weektwo;
+
+import java.util.Scanner;
+/**
+ *
+ * @author Texon, Broderick Jr. M.
+ */
+public class WeekTwo {
+
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter your average grade: ");
+        double average = sc.nextDouble();
+
+        System.out.print("Enter number of absences: ");
+        int absences = sc.nextInt();
+
+        boolean passed = (average >= 75 && absences <= 3) || (average >= 90);
+
+        System.out.println("===================");
+
+        if (passed) {
+            System.out.println("Result: PASS");
+            System.out.println("Reason: You meet the grade requirements.");
+        } else {
+            System.out.println("Result: FAIL");
+            System.out.println("Reason: Your grade or absences do not meet the requirements.");
+        }
+        
+        System.out.println("===================");
+      
+        
+    }
+}
