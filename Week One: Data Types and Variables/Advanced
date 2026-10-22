@@ -1,0 +1,42 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.weekone;
+
+/**
+ *
+ * @author Texon, Broderick Jr. M.
+ */
+public class WeekOne {
+
+    public static void main(String[] args) {
+        
+       double centimeters = 345.50;
+
+        int wholeMeters = (int) centimeters / 100;
+        double remainingCentimeters = centimeters % 100;
+
+        System.out.println("===== UNIT CONVERTER =====");
+        System.out.println("Centimeters: " + centimeters);
+        System.out.println("Whole Meters: " + wholeMeters);
+        System.out.println("Remaining Centimeters: " + remainingCentimeters);
+
+        int number = 456;
+        double widenedNumber = number;
+
+        // Implicit widening is automatic because double
+        // can represent a wider range of values than int.
+        System.out.println("Integer Value: " + number);
+        System.out.println("Widened Double: " + widenedNumber);
+
+        double decimal = 275.85;
+        int convertedNumber = (int) decimal;
+
+        // Explicit narrowing removes the decimal portion.
+        // The value changes from 150.75 to 150.
+        System.out.println("Original Double: " + decimal);
+        System.out.println("Converted Integer: " + convertedNumber);
+        
+    }
+}
