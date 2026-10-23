@@ -1,0 +1,110 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.weekfive;
+
+
+/**
+ *
+ * @author Texon, Broderick Jr. M.
+ */
+public class WeekFive {
+
+     static class Student {
+        String name;
+        int[] quizzes;
+        double average;
+
+        Student(String name, int[] quizzes) {
+            this.name = name;
+            this.quizzes = quizzes;
+
+            int total = 0;
+
+            for (int i = 0; i < quizzes.length; i++) {
+                total += quizzes[i];
+            }
+
+            average = total / (double) quizzes.length;
+        }
+    }
+
+    
+    public static void main(String[] args) {
+        
+        System.out.println("===========CLASS RANKING SYSTEM===========");
+
+        String[] names = {
+            "Freya", "Kelra", "Miya", "Alice", "Karina"
+        };
+
+        int[][] quizScores = {
+            {90, 85, 95, 90},
+            {80, 85, 90, 85},
+            {95, 90, 95, 92},
+            {80, 85, 90, 85},
+            {88, 90, 85, 92}
+        };
+
+        Student[] students = new Student[names.length];
+
+        /* Create Student objects from the 2D array. */
+        for (int i = 0; i < students.length; i++) {
+            students[i] = new Student(names[i], quizScores[i]);
+        }
+
+        /* Linear search for a student by name. */
+        String target = "Miya";
+        int foundAt = -1;
+
+        for (int i = 0; i < students.length; i++) {
+            if (students[i].name.equals(target)) {
+                foundAt = i;
+                break;
+            }
+        }
+
+        if (foundAt != -1) {
+            System.out.println("Student Found: " + students[foundAt].name);
+            System.out.println("Average: " + students[foundAt].average);
+        } else {
+            System.out.println("Student Not Found");
+        }
+
+        /* Manual sorting: highest average first.
+           This uses bubble sort instead of Arrays.sort(). */
+        for (int i = 0; i < students.length - 1; i++) {
+            for (int j = 0; j < students.length - 1 - i; j++) {
+
+                if (students[j].average < students[j + 1].average) {
+                    Student temp = students[j];
+                    students[j] = students[j + 1];
+                    students[j + 1] = temp;
+                }
+            }
+        }
+
+        System.out.println("===========STUDENT LEADERBOARD===========");
+        System.out.printf("%-8s %-12s %-10s%n","Rank", "Name", "Average");
+
+        int rank = 1;
+
+        for (int i = 0; i < students.length; i++) {
+
+            /* Students with equal averages share the same rank. */
+            if (i > 0 &&
+                students[i].average != students[i - 1].average) {
+                rank = i + 1;
+            }
+
+            System.out.printf("%-8d %-12s %-10.2f%n",
+                              rank,
+                              students[i].name,
+                              students[i].average);
+        }
+
+        System.out.println("=".repeat(40));
+        
+    }
+}
