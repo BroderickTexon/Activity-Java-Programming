@@ -1,0 +1,46 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.weekfive;
+
+/**
+ *
+ * @author Texon, Broderick Jr. M.
+ */
+public class WeekFive {
+
+    public static void main(String[] args) {
+        
+        System.out.println("===========CLASS STATISTICS===========");
+
+        int[] scores = {85, 90, 78, 88, 95, 82, 76, 91};
+
+        int total = 0;
+        int highest = scores[0];
+        int lowest = scores[0];
+
+        for (int i = 0; i < scores.length; i++) {
+
+            total += scores[i];
+
+            if (scores[i] > highest) {
+                highest = scores[i];
+            }
+
+            if (scores[i] < lowest) {
+                lowest = scores[i];
+            }
+        }
+
+        double average = total / (double) scores.length;
+
+        System.out.println("Total Score: " + total);
+        System.out.println("Average Score: " + average);
+        System.out.println("Highest Score: " + highest);
+        System.out.println("Lowest Score: " + lowest);
+
+        System.out.println("=".repeat(50));
+        
+    }
+}
