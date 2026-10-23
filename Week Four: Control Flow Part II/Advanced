@@ -1,0 +1,62 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.weekfour;
+
+
+/**
+ *
+ * @author Texon, Broderick Jr. M.
+ */
+public class WeekFour {
+
+    public static void main(String[] args) {
+        
+        System.out.println("===========PATTERN GENERATOR===========");
+
+        for (int row = 1; row <= 5; row++) {
+
+            /* Skip row 3 using continue.*/
+            if (row == 3) {
+                continue;
+            }
+
+            for (int column = 1; column <= row; column++) {
+
+                /* Stop the inner loop when column reaches 4. */
+                if (column == 4) {
+                    break;
+                }
+
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+        
+        System.out.println("=======================================");
+
+        System.out.println("\n===========NUMBER PATTERN===========");
+
+        for (int row = 1; row <= 5; row++) {
+
+            if (row == 3) {
+                continue;
+            }
+
+            for (int column = 1; column <= 5; column++) {
+
+                if (column > row) {
+                    break;
+                }
+
+                System.out.print(column + " ");
+            }
+
+            System.out.println();
+        }
+        
+        System.out.println("=======================================");
+    }
+}
