@@ -1,0 +1,28 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.weekfour;
+
+/**
+ *
+ * @author Texon, Broderick Jr. M.
+ */
+public class WeekFour {
+
+    public static void main(String[] args) {
+        
+        System.out.println("===========NUMBER AND SQUARE PRINTER===========\n");
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("Number: " + i + " | Square: " + (i * i));
+        }
+
+        System.out.println("\n===========UPDATED LOOP TO 20===========\n");
+
+        for (int i = 1; i <= 20; i++) {
+            System.out.println("Number: " + i + " | Square: " + (i * i));
+        }
+    
+    }
+}
