@@ -1,0 +1,40 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.weekfour;
+
+import java.util.Scanner;
+/**
+ *
+ * @author Texon, Broderick Jr. M.
+ */
+public class WeekFour {
+
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+
+        int number;
+        int total = 0;
+
+        System.out.println("===========SUM UNTIL SENTINEL===========");
+        System.out.println("Enter numbers to add.");
+        System.out.println("Enter -1 to stop.");
+
+        System.out.print("Enter a number: ");
+        number = sc.nextInt();
+
+        while (number != -1) {
+            total += number;
+
+            System.out.print("Enter a number: ");
+            number = sc.nextInt();
+        }
+
+        System.out.println("\nTotal Sum: " + total);
+
+       
+        System.out.println("========================================");
+    }
+}
